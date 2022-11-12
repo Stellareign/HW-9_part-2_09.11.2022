@@ -1,15 +1,20 @@
 
 import java.util.Arrays;
 public class Main {
-       public static void main (String[]args){
-        System.out.println("Домашка 9, МАССИВЫ, часть 2, от 09.11.2022 - Задача 1"); // ничего не пинимаю просто, почувствуй себя тупицей :( реву просто
-        System.out.println("Случайные траты по дням составили: " + Arrays.toString(arr));
-           int sumCoastsMonth = 0;
-           for (int i = 0; i < arr.length; i++)
-               sumCoastsMonth += arr[i];
-           System.out.println("Сумма трат за месяц составила " + sumCoastsMonth + " рублей"); // боже, полдня ушло на это, из-за того, что непонятно было, куда именно вставить генерацию массива и где писать код
-// не понимаю, почему генерировать можно (нужно) после кода :(
+    public static void main(String[] args) {
+        System.out.println("Домашка 9, МАССИВЫ, часть 2, от 09.11.2022 - Задача 2"); // найти max и min. Просто оловой об стену.
+        System.out.println("Траты по дням за месяц составили " + Arrays.toString(arr));
+        int maxExpensesMonth = arr[0];
+        int minExpensesMonth = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < minExpensesMonth)
+                minExpensesMonth = arr[i];
+            if (arr[i] > maxExpensesMonth)
+                maxExpensesMonth = arr[i];
         }
+        System.out.println("Минимальная сумма трат за месяц составила " + minExpensesMonth + " рублей");
+        System.out.println("Максимальная сумма трат за месяц составила " + maxExpensesMonth + " рублей");
+    }
     static int[] arr = generateRandomArray();
 
     public static int[] generateRandomArray() {
@@ -20,6 +25,7 @@ public class Main {
         }
         return arr;
     }
-    }
+}
+
 
 
