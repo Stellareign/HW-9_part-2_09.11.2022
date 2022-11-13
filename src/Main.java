@@ -1,4 +1,3 @@
-
 import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
@@ -8,13 +7,12 @@ public class Main {
         double middleExpensesMonth = 0;
         for (int i = 0; i < arr.length; i++) {
             summExpensesMonth += arr[i];
-            middleExpensesMonth = summExpensesMonth / arr.length;
         }
+        middleExpensesMonth = summExpensesMonth / arr.length;
         System.out.println("Сумма трат за месяц составила " + summExpensesMonth + " рублей");
         System.out.println("Средняя сумма трат за месяц составила " + middleExpensesMonth + " рублей");
     }
     static int[] arr = generateRandomArray();
-
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
         int[] arr = new int[30];
