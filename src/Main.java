@@ -11,7 +11,7 @@ public class Main {
         middleExpensesMonth = summExpensesMonth / arr.length;
         System.out.println("Сумма трат за месяц составила " + summExpensesMonth + " рублей");
         System.out.println("Средняя сумма трат за месяц составила " + middleExpensesMonth + " рублей");
-    }//
+    }//что-то не выходит
     static int[] arr = generateRandomArray();
     public static int[] generateRandomArray() {
         java.util.Random random = new java.util.Random();
